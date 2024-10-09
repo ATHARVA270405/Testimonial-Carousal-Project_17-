@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Carousel Container Styling */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+/* Individual Containers */
+.container > div {
+    display: flex;
+    width: 70%;
+    height: 320px;
+    background-color: lightgray;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    /* Split into sub-1 and sub-2 */
+    display: flex;
+}
+
+/* Active container */
+.container > .active {
+    width: 75%;
+    height: 340px;
+    background-color: gray;
+}
+
+/* Sub-1 (30% width) */
+.sub-1 {
+    width: 30%;
+    background-color: rgb(69, 69, 235);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 40px;
+}
+
+/* Sub-2 (70% width) */
+.sub-2 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Profile Image Styling */
+.profile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Navigation Buttons */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6661fe;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets (min-width: 768px and max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container > div {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .sub-1, .sub-2 {
+        width: 100%;
+    }
+
+    .profile {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .container > div {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .sub-1, .sub-2 {
+        width: 100%;
+    }
+
+    .profile {
+        width: 60px;
+        height: 60px;
+    }
+
+    .h3 {
+        font-size: 16px;
+    }
+
+    .desc {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
